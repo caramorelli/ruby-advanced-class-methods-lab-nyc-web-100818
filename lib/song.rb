@@ -1,47 +1,3 @@
-# class Song
-#   attr_accessor :name, :artist_name
-#   @@all = []
-
-#   def self.all
-#     @@all
-#   end
-
-#   def save
-#     self.class.all << self
-#   end
-  
-#   def self.create
-#     @song = song
-#   end 
-  
-#   def name 
-#     @name 
-#   end 
-  
-#   def self.create_by_name(name)
-#     @name = name
-#     @@all << @name
-#   end 
-  
-#   def self.find_by_name(song_name)
-#     @all
-#   end 
-  
-#   def self.find_or_create_by_name(song_name)
-#     unless @@all.include?(song_name) 
-#       song_name
-#     end 
-#   end 
-  
-#   def alphabetical 
-#     @@all.sort
-#   end 
-  
-#   def destroy_all 
-#   end 
-
-# end
-
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -78,17 +34,10 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
-      #if self.find_by_name(name) == nil 
-        #self.create_by_name(name)
-      #else
-        #self.find_by_name(name)
-      #end
       self.find_by_name(name) || self.create_by_name(name)
-      #the above statement is saying do this(if it is true) or that (if the first thing is not true and the second thing is true)
   end
   
   def self.alphabetical()
-    #returns all the songs instances in ascending (a-z) alphabetical order.
     @@all.sort_by{|x| x.name}
   end
   
