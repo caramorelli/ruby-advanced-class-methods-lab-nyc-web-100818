@@ -30,7 +30,6 @@ class Song
   
   def alphabetical 
     @@all.sort
-    
   end 
 
 end
