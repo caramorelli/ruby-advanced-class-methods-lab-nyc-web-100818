@@ -19,7 +19,7 @@ class Song
   end 
   
   def self.find_by_name(song_name)
-    @@all.include?(song_name)
+    @all
   end 
   
   def self.find_or_create_by_name(song_name)
