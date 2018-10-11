@@ -24,7 +24,7 @@ class Song
   
   def self.find_or_create_by_name(song_name)
     unless @@all.include?(song_name) 
-      @@all << song_name
+       song_name
     end 
   end 
   
